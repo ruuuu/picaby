@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Picady</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css"><!-- этот файл поключаем до основного файла стилей-->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header"><!--шапка -->
+            <div class="header-wrapper"><!--тоже саоме что и .container чтобы был блок с классом набираем: .header-wrapper|c и жмем tab и будет блок с комментарем -->
+                <a href="/" class="header-logo">
+                    <img class="header-logo-img" src="img/logo2.svg" width="48" height="13" alt="logo">
+                </a>
+                <nav class="header-nav"><!-- меню-->
+                    <ul class="header-menu">
+                        <li class="header-menu-item">
+                            <a href="" class="header-menu-link">Свежее</a>
+                        </li>
+                        <li class="header-menu-item">
+                            <a href="" class="header-menu-link">Лучшее</a>
+                        </li>
+                        <li class="header-menu-item">                                <a href="" class="header-menu-link">Горячее</a>
+                        </li>
+                        <li class="header-menu-item">                                <a href="" class="header-menu-link">Подписки</a>
+                        </li>
+                    </ul>
+                </nav>  
+
+                <div class="input-group search"><!--поле поиска -->
+                    <input type="text" class="search-input" placeholder="Поиск по сайту"> 
+                    <button class="search-button"><!--кнопка посика в поле-->
+                        <img class="search-icon" src="img/search.svg" width="16" hight="16" alt="поиск">
+                    </button>
+                </div>
+            </div> 
+        </header>
+
+        <div class="content">
+            <!-- main.content+aside.sidebar и tab-->
+            <main class="posts"> 
+                <section class="post"><!-- Пост-->
+                    <div class="post-body">
+                        <h2 class="post-title">Заголовок поста</h2>
+                        <!-- чтобы был тектс рыба надо набать loremru200 (200 это число символов)-->
+                        <p class="post-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое ручеек точках снова текстов запятых снова, несколько что родного своих щеке которой повстречался меня семантика ему но залетают маленькая дорогу домах правилами пунктуация. Они грамматики, переписали заманивший вопроса инициал рыбного текст! Lorem знаках родного взобравшись однажды всемогущая встретил города, проектах наш но бросил, грустный по всей заглавных буквоград что языкового за, ведущими дал имени ipsum. Грамматики, подзаголовок. </p>
+                        <p class="post-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое ручеек точках снова текстов запятых снова, несколько что родного своих щеке которой повстречался меня семантика ему но залетают маленькая дорогу домах правилами пунктуация. Они грамматики, переписали заманивший вопроса инициал рыбного текст! Lorem знаках родного взобравшись однажды всемогущая встретил города, проектах наш но бросил, грустный по всей заглавных буквоград что языкового за, ведущими дал имени ipsum. Грамматики, подзаголовок. </p>
+                        <p class="post-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое ручеек точках снова текстов запятых снова, несколько что родного своих щеке которой повстречался меня семантика ему но залетают маленькая дорогу домах правилами пунктуация. Они грамматики, переписали заманивший вопроса инициал рыбного текст! Lorem знаках родного взобравшись однажды всемогущая встретил города, проектах наш но бросил, грустный по всей заглавных буквоград что языкового за, ведущими дал имени ipsum. Грамматики, подзаголовок. </p>
+                        <div class="tags">
+                            <span class="tag">#Свежее</span>
+                            <span class="tag">#Новое</span>
+                            <span class="tag">#Горячее</span>
+                            <span class="tag">#Мое</span>
+                        </div>
+                    </div>
+                    <div class="post-footer"><!--флекс контенер -->
+                        <div class="post-buttons"><!-- флек сэлемент, корый сам флекс контенер-->
+                            <button class="post-button likes"><!-- флекс элемент, котрый сам флекс коненер-->
+                                <svg width="19" height="20" class="icon icon-like">
+                                    <use xlink:href="img/icons.svg#comments"></use><!--в href указываем ссылку на иконку, comments-это id иконки в icons.svg -->
+                                </svg>
+                                <span class="likes-counter">26</span><!--счетчик-->
+                            </button>
+                            <button class="post-button comments">
+                                <svg width="21" height="21" class="icon icon-comment">
+                                    <use xlink:href="img/icons.svg#like"></use><!--в href указываем ссылку на иконку -->
+                                    <span class="comments-counter">34</span><!--комментов-->
+                                </svg>
+                            </button>
+                            <button class="post-button save">
+                                <svg width="18" height="18" class="icon icon-save">
+                                    <use xlink:href="img/icons.svg#save"></use><!--в href указываем ссылку на иконку -->
+                                </svg>
+                            </button>
+                            <button class="post-button share">
+                                <svg width="17" height="19" class="icon icon-share">
+                                    <use xlink:href="img/icons.svg#share"></use><!--в href указываем ссылку на иконку -->
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="post-authors">
+                            <!-- набирал .author-about+a.author-link>img.author-avatar -->
+                            <div class="author-about">
+                                <a href="" class="author-username">Руфина</a>
+                                <span class="post-time">5 минут назад</span>
+                            </div>
+                            <a class="author-link">
+                                <img class="author-avatar" src="img/avatar.jpeg" alt="avatar" > 
+                            </a>
+                        </div>
+                    </div>
+                </section>   
+                
+                 <section class="post"><!-- Пост-->
+                    <div class="post-body">
+                        <h2 class="post-title">Заголовок поста</h2>
+                        <!-- чтобы был тектс рыба надо набать loremru200 (200 это число символов)-->
+                        <p class="post-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое ручеек точках снова текстов запятых снова, несколько что родного своих щеке которой повстречался меня семантика ему но залетают маленькая дорогу домах правилами пунктуация. Они грамматики, переписали заманивший вопроса инициал рыбного текст! Lorem знаках родного взобравшись однажды всемогущая встретил города, проектах наш но бросил, грустный по всей заглавных буквоград что языкового за, ведущими дал имени ipsum. Грамматики, подзаголовок. </p>
+                        <p class="post-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое ручеек точках снова текстов запятых снова, несколько что родного своих щеке которой повстречался меня семантика ему но залетают маленькая дорогу домах правилами пунктуация. Они грамматики, переписали заманивший вопроса инициал рыбного текст! Lorem знаках родного взобравшись однажды всемогущая встретил города, проектах наш но бросил, грустный по всей заглавных буквоград что языкового за, ведущими дал имени ipsum. Грамматики, подзаголовок. </p>
+                        <p class="post-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свое ручеек точках снова текстов запятых снова, несколько что родного своих щеке которой повстречался меня семантика ему но залетают маленькая дорогу домах правилами пунктуация. Они грамматики, переписали заманивший вопроса инициал рыбного текст! Lorem знаках родного взобравшись однажды всемогущая встретил города, проектах наш но бросил, грустный по всей заглавных буквоград что языкового за, ведущими дал имени ipsum. Грамматики, подзаголовок. </p>
+                        <div class="tags">
+                            <a href="" class="tag">#Свежее</a>
+                            <a href="" class="tag">#Новое</a>
+                            <a href="" class="tag">#Горячее</a>
+                            <a href="" class="tag">#Мое</a>
+                        </div>
+                    </div>
+                    <div class="post-footer"><!--флекс контенер -->
+                        <div class="post-buttons"><!-- флек сэлемент, корый сам флекс контенер-->
+                            <button class="post-button likes"><!-- флекс элемент, котрый сам флекс коненер-->
+                                <svg width="19" height="20" class="icon icon-like">
+                                    <use xlink:href="img/icons.svg#comments"></use><!--в href указываем ссылку на иконку, comments-это id иконки в icons.svg -->
+                                </svg>
+                                <span class="likes-counter">26</span><!--счетчик-->
+                            </button>
+                            <button class="post-button comments">
+                                <svg width="21" height="21" class="icon icon-comment">
+                                    <use xlink:href="img/icons.svg#like"></use><!--в href указываем ссылку на иконку -->
+                                    <span class="comments-counter">34</span><!--комментов-->
+                                </svg>
+                            </button>
+                            <button class="post-button save">
+                                <svg width="18" height="18" class="icon icon-save">
+                                    <use xlink:href="img/icons.svg#save"></use><!--в href указываем ссылку на иконку -->
+                                </svg>
+                            </button>
+                            <button class="post-button share">
+                                <svg width="17" height="19" class="icon icon-share">
+                                    <use xlink:href="img/icons.svg#share"></use><!--в href указываем ссылку на иконку -->
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="post-authors">
+                            <!-- набирал .author-about+a.author-link>img.author-avatar -->
+                            <div class="author-about">
+                                <a href="" class="author-username">Руфина</a>
+                                <span class="post-time">5 минут назад</span>
+                            </div>
+                            <a class="author-link">
+                                <img class="author-avatar" src="img/avatar.jpeg" alt="avatar" > 
+                            </a>
+                        </div>
+                    </div>
+                </section>   
+            </main>
+            <aside class="sidebar">    
+            </aside>
+        </div>
+    </body>
+</html>

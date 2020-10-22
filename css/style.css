@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-width: 1440px;
+    font-family: "Roboto", sans-serif;
+    background-color: #F5F5F5;
+}
+
+
+ul, p, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+} 
+
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.header{
+    background-color: #FA8C16;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+
+.header-wrapper{/*контейнр*/
+
+    width: 90%;
+    max-width: 1200px;/*берем из макета, это ширина блока ценровщика, чтобы не было гор прокрутка*/
+    margin: auto;/*чтоыб ценровался блок*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header-nav{/*флекс элемент*/
+    margin-left: 60px;
+    margin-right: auto;/*флекс элемент прижмется к правому краю*/
+}
+
+
+.header-menu{
+
+    display: flex;
+
+}
+
+.header-menu-link{/*a*/
+    color: #FAFAFA;
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+
+.input-group{
+    width: 237px;/*из макета взяли*/
+    height: 32px;
+    position: relative;/*родитель, для  позиционирвания кнпоки  поиска*/
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;/*чтобы за пределы блока ничичге не вылезало*/
+    border: 1px solid #d9d9d9;
+}
+
+.search-input{
+    width: 80%;
+    height: 100%; /*как и у родител*/
+    border: none;
+    padding-left: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+
+}
+
+
+.search-input::placeholder{
+    color: #BFBFBF;
+}
+
+.search-button{
+    height: 100%;/*как и у родител*/
+    width: 20%;
+    position: absolute;
+    right: 0;/*прижмется  кправому краю*/
+    top: 0;/*прижмется  к верху краю*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.content{
+    width: 90%;
+    max-width: 1200px;/*берем из макета, это ширина блока ценровщика, чтобы не было гор прокрутка*/
+    margin: auto;
+}
+
+
+.posts{
+    max-width: 800px;
+}
+
+.post{
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 30px;
+}
+
+.post-body{
+    padding: 35px;
+    padding-bottom: 0;
+}
+
+.post-title{
+    margin-bottom: 19px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.post-text{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #262626;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.tags{
+    margin-bottom: 22px;
+}
+
+.tag{
+    color: #BFBFBF;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 10px;
+}
+
+.post-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 35px;
+    
+    background-color: #FAFAFA;
+    border-top: 1px solid #E8E8E8;
+}
+
+.post-buttons{
+    display: flex;
+    align-items: center;
+}
+
+.post-button .icon{
+    fill: #8c8c8c;
+}
+
+.icon-like, .icon-comment{
+    margin-right: 6px;
+}
+
+.post-button{/*флекс элемент, котрый сам флекс коненер*/
+    display: flex;
+    align-items: center;
+    margin-right: 19px;
+    background-color: transparent;
+    border: none;
+    color: #8c8c8c;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.post-authors{
+    display: flex;
+    align-items: center;
+    text-align: right;
+}
+
+
+.author-username{
+    display: block;/*чтобы текс перенесся на след строку*/
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8C8C8C;
+}
+
+.author-avatar{
+    width: 34px;
+    height: 34px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+
+.post-time{
+    font-size: 12px;
+    line-height: 20px;
+    color: #BFBFBF;
+}
+
+
