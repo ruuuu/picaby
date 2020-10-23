@@ -1,3 +1,23 @@
+/*скачиваем шрифт отсюда https://bestfonts.pro/font/san-francisco-pro */
+@font-face {
+  font-family: "SFProDisplay-Regular";
+  src: local("SFProDisplay-Regular"), /*если у клиентаа есть системный этот шрифт,  то он подключиться*/
+       url("../fonts/SFProDisplay-Regular.woff") format("woff"),/*если у клиентаа нет системного такого шрифта,  то он погрузить его с урла */
+       url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "SFProDisplay-Semibold";
+  src: local("SFProDisplay-Semibold"), /*если у клиентаа есть системный этот шрифт,  то он подключиться*/
+       url("../fonts/SFProDisplay-Semibold.woff") format("woff"),/*если у клиентаа нет системного такого шрифта,  то он погрузить его с урла */
+       url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -5,7 +25,7 @@
 
 body {
     min-width: 1440px;
-    font-family: "Roboto", sans-serif;
+    font-family: "SFProDisplay-Regular", sans-serif;
     background-color: #F5F5F5;
 }
 
@@ -116,11 +136,15 @@ a{
     width: 90%;
     max-width: 1200px;/*берем из макета, это ширина блока ценровщика, чтобы не было гор прокрутка*/
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 
 .posts{
-    max-width: 800px;
+    /*max-width: 800px;*/
+    width: 67%;
 }
 
 .post{
@@ -136,6 +160,7 @@ a{
 
 .post-title{
     margin-bottom: 19px;
+    font-family: "SFProDisplay-Semibold", sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -169,7 +194,7 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 12px 35px;
-    
+
     background-color: #FAFAFA;
     border-top: 1px solid #E8E8E8;
 }
@@ -229,4 +254,176 @@ a{
     color: #BFBFBF;
 }
 
+.sidebar{
+    width: 31%;
 
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #FAFAFA;
+    border: 1px solid #E8E8E8;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar{
+    border-radius: 50%;
+    margin-right: 17px;
+}
+
+.user-name{
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-style: normal;
+   
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}    
+
+
+.icon-exit{/*img*/
+    width: 24px;
+    height: 24px;
+    fill:"";
+}
+
+
+.sidebar-nav{
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-top: none;
+}
+
+
+.sedebar-menu-link{/*a*/
+    display: inline-block;
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+    padding: 16px 48px;
+}
+
+.sedebar-menu-link:hover{
+    background-color: #FFFBE6;;
+}
+
+
+.sedebar-menu-link.active{
+    background-color: #FFFBE6;
+    color: #FAAD14;
+    border-right: 3px solid #FAAD14;
+}
+
+
+.icon-fire{/*svg*/
+    width: 11px;
+    height: 13px;
+    fill: #fff;
+    margin-right: 10px;
+}
+
+
+.button{
+    background-color: #FAAD14;
+    border-radius: 4px;
+    color:#fff;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px;
+    text-align: center;
+}
+
+
+.button-new-post{/*a*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card{
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    margin-top: 20px;
+
+}
+
+.card-header{
+    padding: 23px 25px;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.card-title{
+    font-style: normal;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+
+
+.card-body{
+    padding: 22px 40px 20px 25px;
+}
+
+
+.card-body-title{
+    display: inline-block;
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #D48806;
+    margin-bottom: 10px;
+}
+
+.card-text{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #262626;
+}
+
+.promo{
+    position: relative;/*родитль для напдписи реклама*/
+    display: block;
+    width: 100%;
+    height: 261px;
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid #e8e8e8;
+    background-image: url('../img/promo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;/*покрывает всю площадь контейнера*/
+    background-position: center center;
+}
+
+
+.promo::before{/*псевдоэлемент*/
+    content: 'реклама';
+    position: absolute;
+    right: 0; /*отступ от права 0 */
+    top: 0;/*отступ  отверха 0 */
+    background-color: #C4C4C4;
+    color: #fff;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+
+}

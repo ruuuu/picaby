@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Picady</title>
+        <title>Picaby</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css"><!-- этот файл поключаем до основного файла стилей-->
         <link rel="stylesheet" href="css/style.css">
@@ -92,8 +92,8 @@
                         </div>
                     </div>
                 </section>   
-                
-                 <section class="post"><!-- Пост-->
+
+                <section class="post"><!-- Пост-->
                     <div class="post-body">
                         <h2 class="post-title">Заголовок поста</h2>
                         <!-- чтобы был тектс рыба надо набать loremru200 (200 это число символов)-->
@@ -145,7 +145,82 @@
                     </div>
                 </section>   
             </main>
-            <aside class="sidebar">    
+            <aside class="sidebar">  
+                <div class="user">
+                    <a href="" class="user-info">
+                        <img class="user-avatar"  src="img/avatar.jpeg" width="40" height="40" alt="photo-user">
+                        <span class="user-name">rdavletova</span>
+                    </a>
+                    <a href="" class="exit">
+                        <svg width="24" height="24" class="icon icon-exit">
+                            <use xlink:href="img/icons.svg#exit"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Ответы
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link active">
+                                Комментарии
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Оценки
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Сохраненное
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Подписки
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Заметки
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="" class="sedebar-menu-link">
+                                Игнор-лист
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="" class="button button-new-post">
+                    <svg width="11" height="13" class="icon icon-fire">
+                        <use xlink:href="img/icons.svg#fire"></use>
+                    </svg>
+                    Опубликовать пост
+                </a>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Комментарий дня</h2>
+                    </div>
+                    <div class="card-body">
+                        <a  href="" class="card-body-title">
+                            Как обмануть банкомат, если вы хотите снять больше наличных
+                        </a>
+                        <p class="card-text">Таким образом укрепление и развитие структуры требуют от нас анализа форм развития. Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же консультация..
+                        </p>
+                    </div>
+                </div>
+                
+                <a href="#" class="promo">
+                    
+                </a>
             </aside>
         </div>
     </body>
