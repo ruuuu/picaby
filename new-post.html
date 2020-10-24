@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Picaby-new post</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css"><!-- этот файл поключаем до основного файла стилей-->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header"><!--шапка -->
+            <div class="header-wrapper"><!--тоже саоме что и .container чтобы был блок с классом набираем: .header-wrapper|c и жмем tab и будет блок с комментарем -->
+                <a href="/" class="header-logo">
+                    <img class="header-logo-img" src="img/logo2.svg" width="48" height="13" alt="logo">
+                </a>
+                <nav class="header-nav"><!-- меню-->
+                    <ul class="header-menu">
+                        <li class="header-menu-item">
+                            <a href="" class="header-menu-link">Свежее</a>
+                        </li>
+                        <li class="header-menu-item">
+                            <a href="" class="header-menu-link">Лучшее</a>
+                        </li>
+                        <li class="header-menu-item">             <a href="" class="header-menu-link">Горячее</a>
+                        </li>
+                        <li class="header-menu-item">             <a href="" class="header-menu-link">Подписки</a>
+                        </li>
+                    </ul>
+                </nav>  
+
+                <div class="input-group search"><!--поле поиска -->
+                    <input type="text" class="search-input" placeholder="Поиск по сайту"> 
+                    <button class="search-button"><!--кнопка посика в поле-->
+                        <img class="search-icon" src="img/search.svg" width="16" hight="16" alt="поиск">
+                    </button>
+                </div>
+
+                <a href="" class="menu-toggle" id="menu-toggle"><!--бургер -->
+                    <span></span><!-- гор линии бургера-->
+                    <span></span>
+                    <span></span>
+                </a>
+
+            </div> 
+        </header>
+
+        <div class="content">
+            <!-- main.content+aside.sidebar и жмем калвишу tab-->
+            <main class="posts"> 
+                <form action="#" class="add-post">
+                    <input type="text" class="add-title" name="post-title" placeholder="Заголовок поста">
+                    <textarea class="add-text" name="post-text" id="text" placeholder="Текст вашего поста">
+                    </textarea>
+
+                    <div class="add-buttons">
+                        <button type="submit" class="button add-button">
+                            <svg width="11" height="13" class="icon icon-fire">
+                                <use xlink:href="img/icons.svg#fire"></use>
+                            </svg>
+                            Опубликовать пост
+                        </button>
+                        <button class="button button-outline">
+                            <svg width="16" height="16" class="icon icon-video">
+                                <use xlink:href="img/icons.svg#video"></use>
+                            </svg>
+                            Видео
+                        </button> 
+                        <button class="button button-outline">
+                            <svg width="16" height="16" class="icon icon-photo">
+                                <use xlink:href="img/icons.svg#photo"></use>
+                            </svg>
+                            Фото
+                        </button>                
+                    </div>
+
+
+                </form>
+            </main>
+            <aside class="sidebar">  
+                <div class="user">
+                    <a href="" class="user-info">
+                        <img class="user-avatar"  src="img/avatar.jpeg" width="40" height="40" alt="photo-user">
+                        <span class="user-name">rdavletova</span>
+                    </a>
+                    <a href="" class="exit">
+                        <svg width="24" height="24" class="icon icon-exit">
+                            <use xlink:href="img/icons.svg#exit"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Ответы
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link active">
+                                Комментарии
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Оценки
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Сохраненное
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Подписки
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="#" class="sedebar-menu-link">
+                                Заметки
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a href="" class="sedebar-menu-link">
+                                Игнор-лист
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="promo">
+
+                </a>
+            </aside>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

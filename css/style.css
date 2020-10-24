@@ -1,19 +1,19 @@
 /*скачиваем шрифт отсюда https://bestfonts.pro/font/san-francisco-pro */
 @font-face {
-  font-family: "SFProDisplay-Regular";
-  src: local("SFProDisplay-Regular"), /*если у клиентаа есть системный этот шрифт,  то он подключиться*/
-       url("../fonts/SFProDisplay-Regular.woff") format("woff"),/*если у клиентаа нет системного такого шрифта,  то он погрузить его с урла */
-       url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
-  font-weight: normal;
+    font-family: "SFProDisplay-Regular";
+    src: local("SFProDisplay-Regular"), /*если у клиентаа есть системный этот шрифт,  то он подключиться*/
+        url("../fonts/SFProDisplay-Regular.woff") format("woff"),/*если у клиентаа нет системного такого шрифта,  то он погрузить его с урла */
+        url("../fonts/SFProDisplay-Regular.woff2") format("woff2");
+    font-weight: normal;
 }
 
 
 @font-face {
-  font-family: "SFProDisplay-Semibold";
-  src: local("SFProDisplay-Semibold"), /*если у клиентаа есть системный этот шрифт,  то он подключиться*/
-       url("../fonts/SFProDisplay-Semibold.woff") format("woff"),/*если у клиентаа нет системного такого шрифта,  то он погрузить его с урла */
-       url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
-  font-weight: bold;
+    font-family: "SFProDisplay-Semibold";
+    src: local("SFProDisplay-Semibold"), /*если у клиентаа есть системный этот шрифт,  то он подключиться*/
+        url("../fonts/SFProDisplay-Semibold.woff") format("woff"),/*если у клиентаа нет системного такого шрифта,  то он погрузить его с урла */
+        url("../fonts/SFProDisplay-Semibold.woff2") format("woff2");
+    font-weight: bold;
 }
 
 
@@ -42,6 +42,7 @@ ul{
     margin: 0;
 }
 
+
 a{
     text-decoration: none;
 }
@@ -56,8 +57,7 @@ a{
 }
 
 
-.header-wrapper{/*контейнр*/
-
+.header-wrapper{/*контейнр .container  у меня обычно это*/
     width: 90%;
     max-width: 1200px;/*берем из макета, это ширина блока ценровщика, чтобы не было гор прокрутка*/
     margin: auto;/*чтоыб ценровался блок*/
@@ -88,7 +88,8 @@ a{
 
 
 .input-group{
-    width: 237px;/*из макета взяли*/
+    max-width: 237px;/*из макета взяли, чтобы на малеьнткх экранах уменьшался размер поля*/
+    width: 60%;
     height: 32px;
     position: relative;/*родитель, для  позиционирвания кнпоки  поиска*/
     background-color: #FFFFFF;
@@ -131,6 +132,9 @@ a{
     cursor: pointer;
 }
 
+.menu-toggle{
+    display: none;
+}
 
 .content{
     width: 90%;
@@ -173,10 +177,6 @@ a{
     color: #262626;
     margin-bottom: 30px;
 }
-
-
-
-
 
 .tags{
     margin-bottom: 22px;
@@ -284,7 +284,7 @@ a{
 .user-name{
     font-family: "SFProDisplay-Semibold", sans-serif;
     font-style: normal;
-   
+
     font-size: 16px;
     line-height: 24px;
     color: #595959;
@@ -336,6 +336,8 @@ a{
 
 
 .button{
+    
+    
     background-color: #FAAD14;
     border-radius: 4px;
     color:#fff;
@@ -344,8 +346,29 @@ a{
     line-height: 24px;
     padding: 13px;
     text-align: center;
+    border: none;
+    cursor: pointer;
 }
 
+.button-outline{
+    
+    background-color: #fff;
+    border: 1px solid #FAAD14;
+    border-radius: 4px;
+    color: #FAAD14;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+
+.button-outline .icon{
+    width: 16px;
+    height: 16px;
+    fill: #FFC53D;
+}
 
 .button-new-post{/*a*/
     width: 100%;
@@ -425,5 +448,172 @@ a{
     font-size: 12px;
     line-height: 20px;
     text-align: center;
+
+}
+
+.add-post{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.add-title, .add-text{
+    background-color: #FFFFFF;
+    padding: 23px 30px;
+    margin-bottom: 20px;
+
+    border: 1px solid #E8E8E8;
+    box-sizing: border-box;
+}
+
+.add-text{
+    min-height: 362px;/*высота етктсарии изм акета*/
+    resize:none; /*чтыб нельяз былоувеличивать размеры*/
+}
+
+.add-button{
+    max-width: 370px;/*ширина самой кнопки изм аткета*/
+    width: 100%;
+    margin-right: 2%;
+
+}
+
+
+.add-post .button-outline{
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+
+@media(max-width: 990px){ /*до 990px*/
+
+    .menu-toggle{ /*бургер*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        margin-left: 12px;
+    }
+
+    .menu-toggle span{
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .header{/*шапка*/
+        position: fixed;/*шапка фиксирована*/
+        left: 0;/*прикрепленакверзу. к лево и  к право*/
+        top: 0;
+        right: 0;
+        width: 100%;
+        z-index: 100;/*чтобы ничегоне н наехало на шапку*/
+    }
+
+    .content{
+        margin-top: 94px;/*инач еблок уезжает под шапку*/
+        margin-bottom: 60px;
+    }
+
+    .sidebar{
+        position: fixed;
+        z-index: 101;
+
+        max-width: 320px;/*чтобы на малеьнких экранах он уменьшался*/
+        width: 100%;
+        height: calc(100% -64px);/*64px высота нижнего меню*/
+        top: 64px; /*от верхнго края до элемета 64px*/
+        right: 0;/*от правого края до элемента 0*/
+        bottom: 0;
+        background-color: #fff;
+        padding: 30px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+        transform: translateX(100%);/*меню выезжает вправо на 100%*/
+        transition: transform 0.2s;/*скорость выезжания меню*/
+        overflow-y: auto;/*автомтаически будет скроллить вниз*/
+    }
+
+    .sidebar.visible{
+        transform: translateX(0);/*скрыли меню*/
+    }
+
+    .posts{
+        width: 100%;/*как и уродителч*/
+    }
+
+    .header-nav{
+        display: none;
+        /*position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #FA8C16;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+        margin-left: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 35px;
+        padding-right: 35px;*/
+    }
+
+    .header-menu{
+        width: 90%;
+        margin: auto;
+    }
+    
+}
+
+
+@media(max-width: 676px){ /*до 700px*/
+    
+    .add-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-button{
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .add-post .button-outline{
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
+
+
+@media(max-width: 576px){ /*до 576px*/
+    .post-footer{
+        flex-direction: column;
+    }
+
+    .post-authors{
+        margin-top: 15px;
+    }
+
+
+    .author-about{/*флекс элемент*/
+        order:2;
+        text-align: left;
+    }
+
+    .author-avatar{/*картикн юзера*/
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    
+    
+    
+    .add-button{
+        width: 100%;/*чтоб перескакивала на след строчку*/
+    }
 
 }
