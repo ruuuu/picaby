@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/normalize.css"><!-- этот файл поключаем до основного файла стилей-->
         <link rel="stylesheet" href="css/style.css">
     </head>
-    
+
     <body>
         <header class="header"><!--шапка -->
             <div class="header-wrapper"><!--тоже саоме что и .container чтобы был блок с классом набираем: .header-wrapper|c и жмем tab и будет блок с комментарем -->
@@ -23,9 +23,11 @@
                         <li class="header-menu-item">
                             <a href="" class="header-menu-link">Лучшее</a>
                         </li>
-                        <li class="header-menu-item">             <a href="" class="header-menu-link">Горячее</a>
+                        <li class="header-menu-item">             
+                            <a href="" class="header-menu-link">Горячее</a>
                         </li>
-                        <li class="header-menu-item">             <a href="" class="header-menu-link">Подписки</a>
+                        <li class="header-menu-item">             
+                            <a href="" class="header-menu-link">Подписки</a>
                         </li>
                     </ul>
                 </nav>  
@@ -65,6 +67,7 @@
                     <div class="post-footer"><!--флекс контенер -->
                         <div class="post-buttons"><!-- флек сэлемент, корый сам флекс контенер-->
                             <button class="post-button likes"><!-- флекс элемент, котрый сам флекс коненер-->
+                               <!--создаем в папке  img файл icons.svg, скачиваем svg иконку, закидваем ее в    https://svgsprit.es/ , копируем код наичнающицся с <symbol> вставляем его в файл  icons.svg, удаляем fill, втсавляем код начинающися на <svg> в этот файл как ниже-->
                                 <svg width="19" height="20" class="icon icon-like">
                                     <use xlink:href="img/icons.svg#comments"></use><!--в href указываем ссылку на иконку, comments-это id иконки в icons.svg -->
                                 </svg>
@@ -152,6 +155,7 @@
                     </div>
                 </section>   
             </main>
+
             <aside class="sidebar">  
                 <div class="user">
                     <a href="" class="user-info">
@@ -225,11 +229,10 @@
                     </div>
                 </div>
 
-                <a href="#" class="promo">
-
-                </a>
+                <a href="#" class="promo"></a>
             </aside>
         </div>
+
         <script src="js/main.js"></script>
     </body>
 </html>

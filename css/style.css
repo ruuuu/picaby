@@ -74,9 +74,7 @@ a{
 
 
 .header-menu{
-
     display: flex;
-
 }
 
 .header-menu-link{/*a*/
@@ -336,8 +334,6 @@ a{
 
 
 .button{
-    
-    
     background-color: #FAAD14;
     border-radius: 4px;
     color:#fff;
@@ -351,7 +347,6 @@ a{
 }
 
 .button-outline{
-    
     background-color: #fff;
     border: 1px solid #FAAD14;
     border-radius: 4px;
@@ -451,13 +446,11 @@ a{
 
 }
 
+
 .add-post{
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 .add-title, .add-text{
     background-color: #FFFFFF;
@@ -474,7 +467,7 @@ a{
 }
 
 .add-button{
-    max-width: 370px;/*ширина самой кнопки изм аткета*/
+    max-width: 370px;/*ширина самой кнопки из макета*/
     width: 100%;
     margin-right: 2%;
 
